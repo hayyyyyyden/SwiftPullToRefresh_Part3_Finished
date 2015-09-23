@@ -14,14 +14,17 @@ cape.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI/32))
 cat.transform = CGAffineTransformMakeTranslation(1.0, 0) 
 UIView.animateWithDuration(0.2, delay: 0,options: .Repeat | .Autoreverse, 
 animations: { () -> Void in 
-  cape.transform = CGAffineTransformMakeRotation(CGFloat(M_PI/32)) cat.transform = CGAffineTransformMakeTranslation(-1.0, 0)
+  cape.transform = CGAffineTransformMakeRotation(CGFloat(M_PI/32)) 
+  cat.transform = CGAffineTransformMakeTranslation(-1.0, 0)
 }, completion: nil)
 
 // 地面和建筑的动画
 let buildings = refreshItems[0].view
-let ground = refreshItems[2].view UIView.animateWithDuration(0.2, delay: 0,
-options: .CurveEaseInOut, animations: { () -> Void in ground.center.y += sceneHeight
-buildings.center.y += sceneHeight
+let ground = refreshItems[2].view 
+UIView.animateWithDuration(0.2, delay: 0,options: .CurveEaseInOut, 
+animations: { () -> Void in 
+  ground.center.y += sceneHeight
+  buildings.center.y += sceneHeight
 }, completion: nil)
 ```
 
